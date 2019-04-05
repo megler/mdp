@@ -1,0 +1,78 @@
+/* Begin Styling For Footer */
+
+footer {
+    grid-column: span 12;
+    padding-top: 1rem;
+    background-color: $primary-neutral-dark;
+    color: textColor($primary-neutral-dark);
+
+    a:visited {
+        color: linkColor($primary-neutral-dark);
+    }
+
+    hr {
+        @include horizontalRule;
+
+    }
+
+}
+
+#copyright {
+    padding-top: 1.5rem;
+    text-align: center;
+
+    &:before {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 95%;
+        padding-bottom: 20px;
+        border-top: 1px solid rgba(255, 255, 255, .3);
+    }
+}
+
+@media print {
+
+    html,
+    body {
+        /*changing width to 100% causes huge overflow and wrap*/
+        height: 100%;
+        overflow: hidden;
+    }
+
+    * {
+        color: #000 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    nav,
+    footer {
+        display: none;
+    }
+
+    h1, h3:not(.siteTagline) {
+        padding: 1rem!important;
+    }
+
+    #siteName,
+    #siteTagline {
+        margin-bottom: 0;
+    }
+
+    img {
+        max-width: 150px;
+        filter: grayscale(100%);
+    }
+
+    .gridContainer {
+        max-width: 100% !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        box-shadow: none !important;
+
+    }
+
+}
+
+/* End Styling For Footer */

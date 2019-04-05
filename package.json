@@ -1,0 +1,17 @@
+{
+  "name": "MaisonduPup",
+  "version": "1.0.0",
+  "description": "Maison du Pup",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css --w --output-style=expanded",
+    "refresh": "browser-sync start --server --files css/*.css *.html scripts/*.js --browser=firefox",
+    "start": "npm-run-all --parallel compile:sass refresh"
+  },
+  "author": "Marceia Egler",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

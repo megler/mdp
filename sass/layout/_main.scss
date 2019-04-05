@@ -1,0 +1,13 @@
+/* Begin Main Content Area Styling */
+
+main {
+    grid-column: span 12;
+    padding: 2em;
+    margin-top: 1rem;
+
+    hr {
+        @include horizontalRule;
+    }
+}
+
+/* End Main Content Area Styling */

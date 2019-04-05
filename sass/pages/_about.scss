@@ -1,0 +1,20 @@
+/* Begin About Page Styles */
+
+.aboutContainer {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.aboutContent p {}
+
+.aboutImg {
+    @include pictureShadow;
+    width: 20rem;
+    height: 26.7rem;
+    margin-top: .8rem;
+}
+
+/* End About Page Styles */

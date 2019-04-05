@@ -1,0 +1,22 @@
+ // Begin Styling For Responsive Layout
+ //     We are going to create a CSS grid based layout with the following features:
+ //  
+ //     1.  12 column layout
+ //		
+ //		2.  Outer site skeleton will be CSS grid.  Inner bones will be flex.
+ //    
+ //     3.  Scaling typography
+
+
+ // Set the grid columns
+
+.gridContainer {
+    max-width: 75%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, minmax(50px, min-content));
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);   
+}
+
+/* End Styling For Responsive Layout */

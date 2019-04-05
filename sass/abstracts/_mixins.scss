@@ -1,0 +1,40 @@
+@mixin horizontalRule {
+    /* Horizontal Rule Style by Dan Eden
+     * https://css-tricks.com/examples/hrs/ 
+     */
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    width: 98%;
+} 
+
+@mixin pictureShadow {
+    box-shadow: .2rem .2rem .7rem .3rem $black;
+}
+
+@mixin headerStyles {
+    font-family: $header-font;
+    color: $first-color;
+}
+
+// A mixin to address breakpoints where the design breaks.  
+
+@mixin respond-to($media) {
+
+  @if $media == mobile-port {
+    @media (min-width: $phone) and (max-width: $tablet-land) { @content; }
+  }
+  @else if $media == tablet-port {
+    @media (min-width: $phone) and (max-width: $tablet-port) { @content; }
+  }
+  @else if $media == tablet-land {
+    @media (min-width: $tablet-land) { @content; }
+  }
+    @else if $media == tablet-typography {
+    @media (min-width: $tablet-port) and (max-width: $tablet-land) { @content; }
+  }
+  @else if $media == desktop {
+    @media (min-width: $tablet-land + 1) { @content; }
+  }
+ }

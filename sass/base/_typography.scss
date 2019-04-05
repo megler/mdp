@@ -1,0 +1,119 @@
+ /*Begin Typography */
+ @font-face {
+     font-family: goldoni;
+     src: url(../fonts/Goldoni_DEMO.otf);
+ }
+
+ html {
+     //sets 1 rem to 10 for spacing purposes.  fonts and headers will be set seperately.
+     font-size: 62.5%;
+ }
+
+ //create variables for responsive typescale.  The only number that needs to change is the multiplier.
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p,
+ li {
+     --browser-default-font: 16;
+     --multiplier: 1.25; // Major Third Type Scale
+     --p: var(--browser-default-font);
+     --h6: calc(var(--p) * var(--multiplier));
+     --h5: calc(var(--h6) * var(--multiplier));
+     --h4: calc(var(--h5) * var(--multiplier));
+     --h3: calc(var(--h4) * var(--multiplier));
+     --h2: calc(var(--h3) * var(--multiplier));
+     --h1: calc(var(--h2) * var(--multiplier));
+
+ }
+
+ body {
+     font-family: $body-font;
+     color: $primary-neutral-dark;
+     line-height: 1.8;
+
+     @include respond-to(tablet-typography) {
+         .heading {
+             --multiplier: 1.20; //Minor Third typescale
+         }
+     }
+
+     @include respond-to(tablet-port) {
+         .heading {
+             --multiplier: 1.125; //Major second typescale
+         }
+     }
+
+     //loop through all headings h1-h6, apply headerStyles mixin and typescale calculation
+     @for $i from 1 through 6 {
+         h#{$i} {
+             font-size: calc(var(--h#{$i}) * 1px);
+             line-height: 1;
+             @include headerStyles;
+         }
+     }
+
+     p,
+     li {
+         font-size: calc(var(--p) * 1px);
+     }
+ }
+
+ /* Typography Styles For Logo H1 and H2 on main site */
+
+ #siteName {
+    
+     @include respond-to(mobile-port) {
+         margin-bottom: -7rem;
+     }
+
+     @include respond-to(tablet-land) {
+         margin-bottom: -9rem;
+
+     }
+ }
+
+
+ #siteTagline {
+
+     line-height: 0;
+     margin-top: 2.5rem;
+
+     h6 {
+         color: $black;
+     }
+ }
+
+ /* Styles for handwriting */
+
+ .letter {
+     font-family: $cursive-font;
+ }
+
+ /* Typography Styles For About Page */
+
+ .aboutContent {
+     h3 {
+         color: $black;
+     }
+ }
+
+ /* Styles For Links */
+
+ a:link {
+     color: $primary-color;
+     text-decoration: none;
+ }
+
+ a:visited {
+     color: $primary-dark;
+ }
+
+ a:hover {
+     color: $first-color;
+ }
+
+ /* End Typography */

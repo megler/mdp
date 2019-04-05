@@ -1,0 +1,712 @@
+/* Marceia Egler
+ * DGMD E-27
+ * Assign 2
+ * 04/01/19
+ */
+/* Declare border-box sizing.
+* Credit:  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+* apply a natural box layout model to all elements, but allowing components to change
+*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* A loop  is being used here to dynamically style the 22 divs that make up
+ * Natalya Shelburne's Color Palette
+ * A key:value list of all color variables from Natalya Shelburne's File Is Used
+ * To Dynamically Generate The Colors In the 22 Divs
+*/
+.c1 {
+  background-color: #ed212f;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c2 {
+  background-color: #21eddf;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c3 {
+  background-color: #cc424b;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c4 {
+  background-color: #3cd3c8;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c5 {
+  background-color: #3cd363;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c6 {
+  background-color: #3cd386;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c7 {
+  background-color: #5fb0aa;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c8 {
+  background-color: #d0e8e6;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c9 {
+  background-color: #224542;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: white;
+}
+
+.c10 {
+  background-color: #a8666a;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c11 {
+  background-color: #e5d1d2;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c12 {
+  background-color: #412527;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: white;
+}
+
+.c13 {
+  background-color: #d78288;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c14 {
+  background-color: #8d353b;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: white;
+}
+
+.c15 {
+  background-color: #7edcd5;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c16 {
+  background-color: white;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c17 {
+  background-color: #878787;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c18 {
+  background-color: #67a8a3;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c19 {
+  background-color: #719d9a;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c20 {
+  background-color: #333333;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: white;
+}
+
+.c21 {
+  background-color: #3cd386;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+.c22 {
+  background-color: #3cd363;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border: 1px solid #333333;
+  color: #333333;
+}
+
+/*Begin Typography */
+@font-face {
+  font-family: goldoni;
+  src: url(../fonts/Goldoni_DEMO.otf);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  --browser-default-font: 16;
+  --multiplier: 1.25;
+  --p: var(--browser-default-font);
+  --h6: calc(var(--p) * var(--multiplier));
+  --h5: calc(var(--h6) * var(--multiplier));
+  --h4: calc(var(--h5) * var(--multiplier));
+  --h3: calc(var(--h4) * var(--multiplier));
+  --h2: calc(var(--h3) * var(--multiplier));
+  --h1: calc(var(--h2) * var(--multiplier));
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #412527;
+  line-height: 1.8;
+}
+
+@media (min-width: 450px) and (max-width: 970px) {
+  body .heading {
+    --multiplier: 1.20;
+  }
+}
+
+@media (min-width: 1px) and (max-width: 450px) {
+  body .heading {
+    --multiplier: 1.125;
+  }
+}
+
+body h1 {
+  font-size: calc(var(--h1) * 1px);
+  line-height: 1;
+  font-family: "goldoni", serif;
+  color: #ed212f;
+}
+
+body h2 {
+  font-size: calc(var(--h2) * 1px);
+  line-height: 1;
+  font-family: "goldoni", serif;
+  color: #ed212f;
+}
+
+body h3 {
+  font-size: calc(var(--h3) * 1px);
+  line-height: 1;
+  font-family: "goldoni", serif;
+  color: #ed212f;
+}
+
+body h4 {
+  font-size: calc(var(--h4) * 1px);
+  line-height: 1;
+  font-family: "goldoni", serif;
+  color: #ed212f;
+}
+
+body h5 {
+  font-size: calc(var(--h5) * 1px);
+  line-height: 1;
+  font-family: "goldoni", serif;
+  color: #ed212f;
+}
+
+body h6 {
+  font-size: calc(var(--h6) * 1px);
+  line-height: 1;
+  font-family: "goldoni", serif;
+  color: #ed212f;
+}
+
+body p,
+body li {
+  font-size: calc(var(--p) * 1px);
+}
+
+/* Typography Styles For Logo H1 and H2 on main site */
+@media (min-width: 1px) and (max-width: 970px) {
+  #siteName {
+    margin-bottom: -7rem;
+  }
+}
+
+@media (min-width: 970px) {
+  #siteName {
+    margin-bottom: -9rem;
+  }
+}
+
+#siteTagline {
+  line-height: 0;
+  margin-top: 2.5rem;
+}
+
+#siteTagline h6 {
+  color: #333333;
+}
+
+/* Styles for handwriting */
+.letter {
+  font-family: "Courgette", cursive;
+}
+
+/* Typography Styles For About Page */
+.aboutContent h3 {
+  color: #333333;
+}
+
+/* Styles For Links */
+a:link {
+  color: #cc424b;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #8d353b;
+}
+
+a:hover {
+  color: #ed212f;
+}
+
+/* End Typography */
+.uTextCenter {
+  text-align: center;
+}
+
+/* Begin Styling for Aside */
+aside {
+  grid-column: span 3;
+  padding: 2em;
+}
+
+/* End Styling for Aside */
+/* Begin Styling For Footer */
+footer {
+  grid-column: span 12;
+  padding-top: 1rem;
+  background-color: #412527;
+  color: white;
+}
+
+footer a:visited {
+  color: #e5d1d2;
+}
+
+footer hr {
+  /* Horizontal Rule Style by Dan Eden
+     * https://css-tricks.com/examples/hrs/ 
+     */
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  width: 98%;
+}
+
+#copyright {
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+#copyright:before {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 95%;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media print {
+  html,
+  body {
+    /*changing width to 100% causes huge overflow and wrap*/
+    height: 100%;
+    overflow: hidden;
+  }
+  * {
+    color: #000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  nav,
+  footer {
+    display: none;
+  }
+  h1, h3:not(.siteTagline) {
+    padding: 1rem !important;
+  }
+  #siteName,
+  #siteTagline {
+    margin-bottom: 0;
+  }
+  img {
+    max-width: 150px;
+    filter: grayscale(100%);
+  }
+  .gridContainer {
+    max-width: 100% !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    box-shadow: none !important;
+  }
+}
+
+/* End Styling For Footer */
+.gridContainer {
+  max-width: 75%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, minmax(50px, min-content));
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* End Styling For Responsive Layout */
+/* Begin Header and Nav Styling */
+header {
+  grid-column: span 12;
+  padding: 3rem 3rem 0 3rem;
+}
+
+@media (max-width: 360px) {
+  header #logoImg {
+    display: none;
+  }
+  header .headerContainer {
+    text-align: center;
+  }
+  header #siteName {
+    grid-column: 1 / span 3;
+    line-height: 3rem;
+  }
+  header #siteTagline {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 1;
+  }
+}
+
+.headerContainer {
+  display: grid;
+  grid-template-columns: 120px auto;
+}
+
+.headerContainer p {
+  margin: 0;
+}
+
+#logoImg {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+}
+
+#siteName {
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 1;
+  align-self: end;
+}
+
+#siteTagline {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  margin: 0;
+  text-decoration: none;
+  padding: 0;
+}
+
+#siteTagline p {
+  margin-top: .5rem;
+}
+
+/* End Header and Nav Styling */
+/* Begin Main Content Area Styling */
+main {
+  grid-column: span 12;
+  padding: 2em;
+  margin-top: 1rem;
+}
+
+main hr {
+  /* Horizontal Rule Style by Dan Eden
+     * https://css-tricks.com/examples/hrs/ 
+     */
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  width: 98%;
+}
+
+/* End Main Content Area Styling */
+/* Create a CSS only dropdown menu */
+nav {
+  grid-column: span 12;
+}
+
+nav hr {
+  /* Horizontal Rule Style by Dan Eden
+     * https://css-tricks.com/examples/hrs/ 
+     */
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  width: 98%;
+}
+
+@media (min-width: 970px) {
+  nav {
+    /* Set Main Nav Bar to be horizontal and centered in Div */
+  }
+  nav #mobileMenu {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    /*Position Relative so submenu will line up correctly */
+  }
+  nav ul li {
+    padding-right: 6rem;
+    position: relative;
+    /*Absolutely position sub-menu in relation to main menu.  Remove left padding so submenu won't be offset
+             * when hovered over.*/
+  }
+  nav ul li ul {
+    position: absolute;
+    left: 0;
+    top: 3.6rem;
+    background-color: #e5d1d2;
+    padding: 0;
+    /* Overflow and height remove sub menu from visibility until hovered.  Transitioning the height
+                 * makes the menu visible in a nice animation.  Yay last semester! */
+  }
+  nav ul li ul li {
+    overflow: hidden;
+    height: 0;
+    transition: height 200ms ease-in;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem 0 2rem;
+    border-right: 1px solid #8d353b;
+  }
+  nav ul li ul li:first-child {
+    border-left: 1px solid #8d353b;
+  }
+  nav ul li ul li:hover {
+    background-color: #d78288;
+    border: 1px solid #8d353b;
+    box-shadow: 0.2rem 0.2rem 0.7rem 0.3rem #333333;
+  }
+}
+
+/* This makes the submenu visible when hovered.  The height set here is what the transition is looking for */
+nav ul > li:hover ul li {
+  height: 7rem;
+}
+
+nav ul > li:hover ul li:hover a {
+  color: white;
+  width: 100%;
+}
+
+@media (min-width: 1px) and (max-width: 970px) {
+  #mobileMenu {
+    display: inline-flex;
+    flex-direction: column;
+  }
+  .fa-bars {
+    padding: .5rem;
+    color: #333333;
+    background-color: white;
+  }
+  .slicknav_btn {
+    background-color: white;
+  }
+  .slicknav_menu {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: white;
+  }
+  .menu {
+    display: none;
+  }
+  nav ul > li:hover ul li {
+    height: auto;
+  }
+}
+
+/* Begin Homepage Styles */
+main {
+  --cv-flex-dir: row;
+  --cv-padding: 2rem;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: var(--cv-flex-dir);
+  padding: var(--cv-padding);
+}
+
+.welcome picture {
+  align-self: center;
+  justify-self: center;
+}
+
+.featured {
+  display: flex;
+  flex-direction: var(--cv-flex-dir);
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.featured img {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 1px) and (max-width: 970px) {
+  .welcome {
+    --cv-flex-dir: column;
+    --cv-padding: 0;
+    align-items: center;
+  }
+  .welcome h1 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 970px) {
+  .welcome h1 {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1380px) {
+  .welcome h1 {
+    text-align: left;
+  }
+}
+
+.letterContent {
+  padding-left: 2rem;
+}
+
+.mascot,
+.product {
+  box-shadow: 0.2rem 0.2rem 0.7rem 0.3rem #333333;
+  flex-shrink: 0;
+}
+
+/* End Homepage Styles */
+/* Begin About Page Styles */
+.aboutContainer {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutImg {
+  box-shadow: 0.2rem 0.2rem 0.7rem 0.3rem #333333;
+  width: 20rem;
+  height: 26.7rem;
+  margin-top: .8rem;
+}
+
+/* End About Page Styles */

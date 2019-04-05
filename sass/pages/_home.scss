@@ -1,0 +1,66 @@
+/* Begin Homepage Styles */
+
+main {
+    --cv-flex-dir: row;
+    --cv-padding: 2rem;
+
+}
+
+.welcome {
+    display: flex;
+    flex-direction: var(--cv-flex-dir);
+    padding: var(--cv-padding);
+
+    picture {
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+.featured {
+    display: flex;
+    flex-direction: var(--cv-flex-dir);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    img {
+        margin-top: 1.5rem;
+    }
+}
+
+.welcome {
+    @include respond-to(mobile-port) {
+        --cv-flex-dir: column;
+        --cv-padding: 0;
+        align-items: center;
+
+        h1 {
+            text-align: center;
+        }
+    }
+
+    @include respond-to(tablet-land) {
+        h1 {
+            text-align: center;
+        }
+    }
+    //this is a one off media query I did not include in the mixin.  It applies to H1 on homepage only
+    @media only screen and (min-width: 1380px) {
+        h1 {
+            text-align: left;
+        }
+    }
+}
+
+.letterContent {
+    padding-left: 2rem;
+}
+
+.mascot,
+.product {
+    @include pictureShadow;
+    flex-shrink: 0;
+}
+
+
+/* End Homepage Styles */

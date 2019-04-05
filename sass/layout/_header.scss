@@ -1,0 +1,63 @@
+/* Begin Header and Nav Styling */
+
+header {
+    grid-column: span 12;
+    padding: 3rem 3rem 0 3rem;
+
+    @media (max-width: 360px) {
+        #logoImg {
+            display:none;            
+        }
+        .headerContainer {
+            text-align: center;
+        }
+        #siteName {
+            grid-column: 1 / span 3;
+            line-height: 3rem;
+        }
+        #siteTagline {
+            grid-column: 1 / span 3;
+            grid-row: 2 / span 1;
+        }
+    }
+
+}
+
+.headerContainer {
+    display: grid;
+    grid-template-columns: 120px auto;
+
+    p {
+        margin: 0;
+    }
+
+}
+
+#logoImg {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+
+
+}
+
+#siteName {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
+   // margin: 0;
+    align-self: end;
+}
+
+#siteTagline {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+
+    p {
+        margin-top: .5rem;
+    }
+}
+
+
+/* End Header and Nav Styling */

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Maison du Pup</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/slicknav.css" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="gridContainer">
+        <header>
+            <div class="headerContainer">
+                <a href="index.html" id="logoImg"><img src="./images/logo.png" alt="Jacques - The Mascot of Maison du Pup"></a>
+                <a href="index.html" id="siteName">
+                    <h4 class="heading">Maison du Pup</h4>
+                </a>
+                <a href="index.html" id="siteTagline">
+                    <h6 class="heading">The Life That Dog Built</h6>
+                </a>
+            </div>
+        </header>
+        <nav>
+            <hr>
+            <div id="mobileMenu"></div>
+            <ul class="menu slickMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Shop</a>
+                    <ul>
+                        <li><a href="#">Tees</a></li>
+                        <li><a href="#">Hats</a></li>
+                        <li><a href="#">Decals & Car Magnets</a></li>
+                        <li><a href="#">Totes</a></li>
+                        <li><a href="#">Picture Frames & Home Decor</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <hr>
+        </nav>
+        <main>          
+            <section class="welcome">
+                <picture>
+                    <source media="(min-width: 490px)" srcset="images/teddy.jpg">
+                    <img src="images/teddySm.jpg" class="mascot" alt="Gusto Standing In For Jacques">
+                </picture>                
+                <div class="letterContent">
+                    <h1 class="heading">Join The Revolution!</h1>
+                    <p>Maison du Pup offers your favorite dog themed styles for less than the manufacturer!
+                        We buy wholesale from them then pass the savings on to you.</p>
+                    <p>So take a look at our latest fashions and see what Maison can do for you!</p>
+                    <p class="letter">Vive Le Dog!</p>
+                    <p class="letter">Jacques</p>
+                </div>
+            </section>
+            <hr>
+            <h3 class="uTextCenter heading">Check Out Our Latest Additions!</h3>
+            <p class="uTextCenter">We are authorized resellers of <a href="http://teddythedog.com">Teddy The Dog</a>
+                and <a href="http://dogisgood.com">Dog Is Good</a>. We buy from them and sell
+                to you for less.</p>
+            <section class="featured">
+                <a href="#">
+                    <picture>
+                        <source media="(min-width: 476px)" srcset="images/allThatGlittersTee.jpg">
+                        <img src="images/allThatGlittersTeeSm.jpg" alt="All That Glitters Is Golden TShirt">
+                    </picture>
+                </a>
+                <a href="#">
+                    <picture>
+                        <source srcset="images/animal_house2.jpg" media="(min-width: 476px)" />
+                        <img src="images/animal_houseSm.jpg" alt="Animal House TShirt" />
+                    </picture>
+                </a>
+                <a href="#">
+                    <picture>
+                        <source srcset="images/BeaglesWomensTee2.jpg" media="(min-width: 476px)" />
+                        <img src="images/BeaglesWomensTeeSm.jpg" alt="Beagles TShirt" />
+                    </picture>
+                </a>
+                <a href="#">
+                    <picture>
+                        <source srcset="images/BassetCaseTee2.jpg" media="(min-width: 476px)" />
+                        <img src="images/BassetCaseTeeSm.jpg" alt="Basset Case TShirt" />
+                    </picture>
+                </a>
+                <a href="#">
+                    <picture>
+                        <source srcset="images/BichonPleaseTee2.jpg" media="(min-width: 476px)" />
+                        <img src="images/BichonPleaseTeeSm.jpg" alt="Bichon, Please TShirt" />
+                    </picture>
+                </a>
+                <a href="#">
+                    <picture>
+                        <source srcset="images/sit_show_classic2.jpg" media="(min-width: 476px)" />
+                        <img src="images/sit_show_classicSm.jpg" alt="Total Sit Show TShirt" />
+                    </picture>
+                </a>
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <p id="copyright">Copyright 2019 | <a href="index.html">Maison du Pup</a></p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./scripts/jquery.slicknav.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
